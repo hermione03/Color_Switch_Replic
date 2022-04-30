@@ -1,8 +1,7 @@
 extends Sprite
-var passer: bool = false 
 
-var _limiti:Vector2
-var _limits:Vector2 = Vector2(100,-435)
+
+
 var _velocity:Vector2 
 var _acceleration:Vector2
 
@@ -18,18 +17,12 @@ func _init(	image_file:String = "res://assets/balle_violette.png",
 
 	
 	
-func _process(delta):
+
 	
 	#var dt = _collision(delta)
 	
-	_velocity.y += _acceleration.y * delta
-	position += _velocity * delta
-	if (passer ):
-		
-		if (position.x <= _limits.x && _velocity.x < 0.0) :
-			_velocity.x = -_velocity.x
-		if (position.y <= _limits.y && _velocity.y < 0.0)  :
-			_velocity.y = -_velocity.y
+	
+	
 	
 
 # Called when the node enters the scene tree for the first time.
