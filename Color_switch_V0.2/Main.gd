@@ -99,60 +99,31 @@ func _process(delta):
 	else:
 		purple = deg2rad(90)"""
 
-	if (pas == 1):
-		if (purple >=0 && purple <=90):
-			print("purple",purple)
-			
-			if (Ball.position.y>-418  && Ball.position.y<-400) :
-				Ball.position = Vector2(100,100)
-				Ball.start = false
-				
+	if (purple >=0 && purple <=90):
+		print("purple",purple)
+		
+		if ((Ball.position.y>-418  && Ball.position.y<-400)&&(pas == 1)) :
+			Ball.position = Vector2(100,100)
+			Ball.start = false
 			
 		
+		if ((Ball.position.y>-762  && Ball.position.y<-712)&&(pas == -1)) :
+			Ball.position = Vector2(100,100)
+			Ball.start = false
+	
+			
 				
-					
-				
-		else:
-			print(".")
-			if ((Ball.position.y>-418  && Ball.position.y<-400)||(Ball.position.y>-762 && Ball.position.y<-712)):
-				Ball.position = Vector2(100,100)
-				Ball.start = false
-				print("*****************************************")
-			if (purple == 180):
-				purple = 0 
-				pas = -pas 
+			
 	else:
-		if (purple >=0 && purple <=90):
-			print("purple",purple)
-			
-			
-			if (Ball.position.y>762  && Ball.position.y<-712) :
-				Ball.position = Vector2(100,100)
-				Ball.start = false
-				
-			
-		
-				
-					
-				
-		else:
-			print(".")
-			if ((Ball.position.y>-418  && Ball.position.y<-400)||(Ball.position.y>-762 && Ball.position.y<-712)):
-				Ball.position = Vector2(100,100)
-				Ball.start = false
-				print("*****************************************")
-		if (purple == 180):
-			purple = 0 
-			pas = -pas 
-
-		
-			
-			
-			
-	
-	
-	
-		
+		print(".")
+		if ((Ball.position.y>-418  && Ball.position.y<-400)||(Ball.position.y>-762 && Ball.position.y<-712)):
+			Ball.position = Vector2(100,100)
+			Ball.start = false
+			print("*****************************************")
+	if (purple == 180):
+		purple = 0 
+		pas = -pas 
+	print(pas)
 	purple+=1
 		
 	
